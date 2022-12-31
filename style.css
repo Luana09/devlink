@@ -85,12 +85,17 @@ body *{
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    animation: slide-back 0.2s;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--hightligh-color);
 }
 
 
 .Light #switch button{
-    right: 0;
-    left: initial;
+    /* animação criada no fim do codifo para mudanção do botão  */
+    animation: slide-in 0.4s forwards;
 }
 
 #switch span{
@@ -170,3 +175,23 @@ footer {
         --bg-url: url(./source/bg_light.jpg);
      }
 } 
+
+/* animation ou animação do botao indo e voltando  */
+
+@keyframes slide-in {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+}
