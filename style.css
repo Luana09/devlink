@@ -32,6 +32,7 @@ body{
     background-size: cover; */
     /* reduzido */
     background: var(--bg-url) no-repeat top center/cover ;
+    height: 100vh;
 }
 body *{
     font-family: 'Inter', sans-serif;
@@ -158,3 +159,14 @@ footer {
     text-align: center;
     font-size: 14px;
 }
+
+/* media queries */
+
+@media (min-width: 700px) {
+     :root {
+        --bg-url: url(./source/bg_dark.jpg);
+     }
+     .Light {
+        --bg-url: url(./source/bg_light.jpg);
+     }
+} 
